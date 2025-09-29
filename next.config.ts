@@ -1,36 +1,37 @@
-import type { NextConfig } from "next"
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
   experimental: {
     serverActions: {
-      bodySizeLimit: "5mb"
-    }
+      bodySizeLimit: "5mb",
+    },
   },
   images: {
     remotePatterns: [
       {
         hostname: "firebasestorage.googleapis.com",
         protocol: "https",
-        pathname: "**"
+        pathname: "**",
       },
       {
         hostname: "placehold.co",
         protocol: "https",
-        pathname: "**"
+        pathname: "**",
       },
       {
         hostname: "example.com",
         protocol: "https",
-        pathname: "**"
-      }
-    ]
-  }
-}
+        pathname: "**",
+      },
+    ],
+  },
+};
 
-export default nextConfig
+export default nextConfig;
