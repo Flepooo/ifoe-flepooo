@@ -1,0 +1,18 @@
+{
+  "build": {
+    "env": {
+      "MY_RUNTIME_VAR": "value_at_runtime"
+    }
+  },
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/custom-path",
+      "destination": "/api/handler"
+    }
+  ]
+}
